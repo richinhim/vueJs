@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+<ul class="list">
+
+	<li>coffee</li>
+
+	<li>tea</li>
+
+	<li>milk</li>
+
+	<li>green tea</li>
+
+</ul>
+
+<script>
+
+//https://yeon6852.tistory.com/190
+
+    $(function(){
+
+        var len = $('ul.list').children().length;
+
+        alert("len="+ len);
+
+        $('ul.list').children().click(function(){
+
+            var cho = $("ul.list").children().index(this);
+            alert("cho = "+ cho);
+        });
+
+    });
+
+</script>
+</body>
+
+</html>
