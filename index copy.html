@@ -46,9 +46,11 @@
             methods: {
                 addMessage(event) {
                     if(!this.newMessage){ return;}
+                    let now = new Date()
                     this.messages.push({
+                        is: now.getTime(),
                         text: this.newMessage, createdAt: new Date()
-                    });
+                    })
                     this.newMessage = '';
                 },
                 deleteMessage(message){
