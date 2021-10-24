@@ -28,9 +28,15 @@
 
     <script type="module">
         import MessageList from "./components/MessageList.js"
+        //import lifecycleLogger from './mixins/lifecycle-logger.mixins.js'
+        import LifecycleLogger from './plugins/lifecycle-logger.plugin.js'
         import './directives/focus.directive.js'
+        import './filters/datetime.filter.js'
+        Vue.use(LifecycleLogger, {beforeMount: false})
         let vm = new Vue({
             el: '#app',
+            name: 'MessagesApp',
+            //mixins: [lifecycleLogger],
             data: {
                 messages
                 :[],
